@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript task 3</title>
+</head>
+<body>
+    <p id="task1"></p>
+    <p id="task2"></p>
+    <script>
+    function canBeDivisible(num) {
+        let output = [];
+        
+            for(let i=1; i<=num; i++){
+                if((i % 2 === 0) && (i % 3 === 0) && (i % 5 === 0)){
+                    output.push("yu-gi-oh");
+                }
+                else if((i % 2 === 0) && (i % 3 === 0)){
+                    output.push("yu-gi");
+                }
+                else if((i % 2 === 0) && (i % 5 === 0)){
+                    output.push("yu-oh");
+                }
+                else if((i % 3 === 0) && (i % 5 === 0)){
+                    output.push("gi-oh");
+                }
+                else if(i % 2 === 0){
+                    output.push("yu");
+                }
+                else if(i % 3 === 0){
+                    output.push("gi");
+                }
+                else if(i % 5 === 0){
+                    output.push("oh");
+                }
+                else {
+                    output.push(i);
+                }
+            }
+            return output;
+        }
+            console.log(canBeDivisible(100)); 
+            console.log(canBeDivisible(24)); 
+
+            document.getElementById("task1").innerHTML = (canBeDivisible(100));
+            document.getElementById("task2").innerHTML = (canBeDivisible(24));
+    </script>
+</body>
+</html>
